@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'Hauora';
+    src: url('./assets/fonts/web/Hauora-SemiBold.woff2') format('woff2'),
+         url('./assets/fonts/web/Hauora-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+   ::-webkit-scrollbar {
+     display: none;
+   }

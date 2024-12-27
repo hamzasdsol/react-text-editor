@@ -1,0 +1,30 @@
+.ql-container {
+  border: none !important;  
+  box-shadow: none !important;
+  font-size: 16px;
+}
+
+.ql-toolbar.ql-snow {
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  font-size: 20px;
+  background-color: white;
+  z-index: 10;
+  position: sticky;
+  top: 0; 
+}
+
+.ql-editor img {
+  max-width: 100%;
+  display: block;
+  margin: 10px auto;
+}
+
+.ql-editor .ql-image-resize {
+  display: inline-block;
+  position: relative;
+}
+.ql-image-resize {
+  display: none !important; 
+}
