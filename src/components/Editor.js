@@ -61,17 +61,66 @@ const TextEditor = () => {
     }
   }, []);
 
+  const Toolbar = (
+    <div id="toolbar">
+      <span className="ql-formats" title="Header">
+        <select className="ql-header">
+          <option value="1">H1</option>
+          <option value="2">H2</option>
+          <option value="3">H3</option>
+          <option value="">Normal</option>
+        </select>
+      </span>
+      <span className="ql-formats" title="Bold" >
+        <button className="ql-bold"></button>
+      </span>
+      <span className="ql-formats" title="Italic">
+        <button className="ql-italic"></button>
+      </span>
+      <span className="ql-formats" title="Underline">
+        <button className="ql-underline"></button>
+      </span>
+      <span className="ql-formats" title="Strikethrough">
+        <button className="ql-strike"></button>
+      </span>
+      <span className="ql-formats" title="Text Color">
+        <select className="ql-color"></select>
+      </span>
+      <span className="ql-formats" title="Highlight">
+        <select className="ql-background"></select>
+      </span>
+      <span className="ql-formats" title="Ordered List">
+        <button className="ql-list" value="ordered"></button>
+      </span>
+      <span className="ql-formats" title="Bullet List">
+        <button className="ql-list" value="bullet"></button>
+      </span>
+      <span className="ql-formats" title="Alignment">
+        <select className="ql-align"></select>
+      </span>
+      <span className="ql-formats" title="Insert Link">
+        <button className="ql-link"></button>
+      </span>
+      <span className="ql-formats" title="Insert Image">
+        <button className="ql-image"></button>
+      </span>
+      <span className="ql-formats" title="Font">
+        <select className="ql-font">
+          <option value="sans-serif">Sans Serif</option>
+          <option value="serif">Serif</option>
+          <option value="monospace">Monospace</option>
+        </select>
+      </span>
+      <span className="ql-formats" title="Clear Formatting">
+        <button className="ql-clean"></button>
+      </span>
+    </div>
+  );
+
   const modules = {
-    toolbar: [
-      [{ header: [1, 2, 3, false] }],
-      ["bold", "italic", "underline", "strike"],
-      [{ color: [] }, { background: [] }],
-      [{ list: "ordered" }, { list: "bullet" }],
-      [{ align: [] }],
-      ["link", "image"],
-      [{ font: ["sans-serif", "serif", "monospace"] }],
-      ["clean"],
-    ],
+    toolbar: {
+      container: "#toolbar",
+    },
     imageResizer: {},
   };
 
@@ -98,7 +147,8 @@ const TextEditor = () => {
       </h2>
   
       <div className="flex justify-center w-full max-w-4xl flex-1">
-        <div className="flex flex-col w-full h-[calc(100vh-92px)] bg-white shadow-lg rounded-lg">
+        <div className="flex flex-col w-full h-[calc(100vh-92px)] bg-white shadow-lg rounded-lg sm:ml-8 sm:mr-8">
+        {Toolbar}
           <div className="flex-1 overflow-y-auto ">
             <ReactQuill
               ref={quillRef}

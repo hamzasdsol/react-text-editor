@@ -2,8 +2,11 @@
   border: none !important;  
   box-shadow: none !important;
   font-size: 16px;
+  line-height: normal;
 }
-
+.ql-editor {
+padding-top: 30px;
+}
 .ql-toolbar.ql-snow {
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
